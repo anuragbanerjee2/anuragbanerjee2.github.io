@@ -1,10 +1,10 @@
 
 <script>
 const userAction = async () => {
-  const response = await fetch('https://reqres.in/api/users?page=2');
+  const response = await fetch('http://192.168.29.122/cm?cmnd=Power1');
   const myJson = await response.json();
   // do something with myJson
-  alert(myJson.json);
+  alert(myJson.);
 }
 
 userAction();
@@ -12,7 +12,7 @@ userAction();
 <center>
 <table style="width:20%">
 <tr>
-<td><button id="1" onclick="fetch('http://192.168.29.122/cm?cmnd=Power1%20TOGGLE',{ mode: 'no-cors'})">Night Lamp</button></td>
+<td><button id="1" onclick="fetch('http://192.168.29.122/cm?cmnd=Power1%20TOGGLE',{ mode: 'cors'})">Night Lamp</button></td>
 <td><button onclick="fetch('http://192.168.29.122/cm?cmnd=Power2%20TOGGLE')">Tube Light</button></td>
 </tr>
 
