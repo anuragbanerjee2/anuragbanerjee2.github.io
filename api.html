@@ -2,7 +2,11 @@
 <script>
 const userAction = async () => {
   var headers = {}
-  const response = await fetch('http://192.168.29.122/cm?cmnd=Power1');
+  const response = await fetch('http://192.168.29.122/cm?cmnd=Power1',{
+        method : "GET",
+        mode: 'cors',
+        headers: headers
+    });
   const myJson = await response.json();
   // do something with myJson
   alert(myJson);
